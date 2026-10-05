@@ -2,7 +2,7 @@
 
 A reusable Codex skill for building miniature Three.js worlds and articulated assets from code. Includes **Aster**, an animated rocket launch complex, **Vela**, a two-stage rocket that flies from the pad to orbit, **Roo**, an articulated robot, and **Sprout Yard**, an interactive garden center.
 
-[**Browse all showcases →**](https://gurungabit.github.io/procedural-isometric-worlds/) · [Aster](https://gurungabit.github.io/procedural-isometric-worlds/assets/rocket/) · [Vela](https://gurungabit.github.io/procedural-isometric-worlds/assets/vela/) · [Robot example](https://gurungabit.github.io/procedural-isometric-worlds/assets/robot/) · [Garden example](https://gurungabit.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb) · [Skill ZIP](procedural-isometric-worlds.zip)
+[**Browse all showcases →**](https://gurungabit.github.io/procedural-isometric-worlds/) · [Aster](https://gurungabit.github.io/procedural-isometric-worlds/assets/rocket/) · [Vela](https://gurungabit.github.io/procedural-isometric-worlds/assets/vela/) · [Robot example](https://gurungabit.github.io/procedural-isometric-worlds/assets/robot/) · [Garden example](https://gurungabit.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb)
 
 ## What it builds
 
@@ -18,7 +18,7 @@ Clone this repository into your personal Codex skills directory:
 git clone https://github.com/gurungabit/procedural-isometric-worlds.git ~/.codex/skills/procedural-isometric-worlds
 ```
 
-If that directory already exists, update the existing checkout or install the ZIP contents into it rather than cloning over it. The skill entrypoint is [SKILL.md](SKILL.md).
+If that directory already exists, update the existing checkout rather than cloning over it. The skill entrypoint is [SKILL.md](SKILL.md).
 
 Example request:
 
@@ -92,7 +92,6 @@ Use an outer placement group for movement through the world. `robot.createAnimat
 - `assets/robot/`: original robot factory and interactive preview.
 - `assets/starter/`: original garden-center example.
 - `models/roo-robot.glb`: reusable model with four animation clips.
-- `procedural-isometric-worlds.zip`: portable skill bundle.
 - `index.html`, `.nojekyll`: GitHub Pages showcase gallery and static publishing configuration.
 
 GitHub Pages publishes `main` from the repository root. The homepage is a gallery that links to every showcase; relative asset paths also work on project Pages URLs.
