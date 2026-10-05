@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Roo · Your procedural robot</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head>
+<body>
+  <div class="app">
+    <header><a class="brand" href="./" aria-label="Roo home"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5" y="9" width="22" height="18" rx="6" stroke="currentColor" stroke-width="2"/><path d="M16 9V5M12 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="16" r="2" fill="currentColor"/><circle cx="21" cy="16" r="2" fill="currentColor"/></svg>Roo</a><span class="header-note">A little robot. A lot of character.</span><span class="status"><span></span>Ready to play</span></header>
+    <main>
+      <section class="viewer" aria-label="Interactive 3D robot">
+        <div class="intro"><h1>Meet Roo.</h1><p>Your friendly, articulated utility robot.</p></div>
+        <div id="stage"><div id="loading" role="status">Assembling Roo…</div></div>
+        <div class="view-tools"><span>Drag to rotate · Scroll to zoom</span><button id="reset" aria-label="Reset camera view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 11a8 8 0 1 1 2 7M4 4v7h7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      </section>
+      <aside aria-label="Robot controls">
+        <div class="personality"><h2>Say hello.</h2><p>Give Roo a move and watch the joints do their thing.</p></div>
+        <fieldset><legend>Movement</legend><div class="moves"><button data-mode="idle" aria-pressed="true">Idle</button><button data-mode="wave" aria-pressed="false">Wave</button><button data-mode="walk" aria-pressed="false">Walk</button><button data-mode="dance" aria-pressed="false">Dance</button></div></fieldset>
+        <fieldset class="finish"><legend>Accent color</legend><div class="swatches"><button data-color="#388f89" style="--swatch:#388f89" aria-label="Teal accent" aria-pressed="true"></button><button data-color="#d7983e" style="--swatch:#d7983e" aria-label="Amber accent" aria-pressed="false"></button><button data-color="#cd7160" style="--swatch:#cd7160" aria-label="Coral accent" aria-pressed="false"></button><button data-color="#7285bd" style="--swatch:#7285bd" aria-label="Periwinkle accent" aria-pressed="false"></button></div></fieldset>
+        <div class="toggles"><button id="pause" aria-pressed="false">Pause animation</button><label><input type="checkbox" id="wireframe"> Show wireframe</label></div>
+        <div class="asset-info"><h3>Built from shapes.</h3><p>Rounded boxes, cylinders, and spheres. A canvas face. Every part generated with code.</p><dl><div><dt>Model</dt><dd>Roo / R-01</dd></div><div><dt>Rig</dt><dd>Articulated joints</dd></div><div><dt>Current move</dt><dd id="current-mode">Idle</dd></div></dl></div>
+        <button id="export" class="download">Download 3D model <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p id="export-note" class="export-note" role="status">GLB format · includes four joint animations</p>
+      </aside>
+    </main>
+    <footer><span>Made with the procedural-isometric-worlds skill.</span><a href="robot.js" download>View asset source <span aria-hidden="true">↗</span></a></footer>
+  </div>
+  <script type="module">try{await import('./main.js');}catch(error){document.querySelector('#loading').textContent='Roo could not load. Check your WebGL support and connection, then reload.';for(const b of document.querySelectorAll('button'))b.disabled=true;console.error(error);}</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sprout Yard · Procedural Isometric Starter</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#253c35;background:#edf2ed;font-family:system-ui,sans-serif}
+    .app{height:100dvh;display:flex;flex-direction:column}header{padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid #d1ddd3}
+    h1{font-size:24px;letter-spacing:-.8px;margin:0}header p{font-size:13px;margin:4px 0 0;color:#607768}.tag{font-size:11px;letter-spacing:1.2px;font-weight:700;text-transform:uppercase;color:#35644d}
+    main{flex:1;display:flex;min-height:0}#stage{flex:1;position:relative;min-width:0;min-height:0}canvas{display:block;touch-action:none}
+    #loading{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:28px}#loading[hidden]{display:none}
+    aside{width:275px;background:#f9fbf7;border-left:1px solid #d1ddd3;padding:24px;overflow:auto}h2{font-size:19px;margin:8px 0}aside p{font-size:13px;line-height:1.55;color:#607768}.data{margin:18px 0;padding-top:16px;border-top:1px solid #d1ddd3}.data span{display:block;font-size:12px;color:#607768}.data b{display:block;font-size:26px;margin-top:4px}
+    label{display:block;font-size:12px;margin:22px 0 8px}select{width:100%;padding:10px;border:1px solid #c3d3c7;border-radius:8px;background:white;color:inherit}button{font:inherit;font-size:13px;padding:10px 14px;border:1px solid #bdcfc3;border-radius:9px;background:#f9fbf7;color:#253c35;cursor:pointer}button:hover{background:#dce9df}button:focus-visible,select:focus-visible{outline:3px solid #548e68;outline-offset:3px}button:disabled{opacity:.45;cursor:default}#plant{background:#32694a;color:white;width:100%;margin-top:16px}
+    footer{min-height:66px;padding:12px 22px;border-top:1px solid #d1ddd3;display:flex;gap:8px;align-items:center;flex-wrap:wrap}#stats{font-size:11px;color:#607768;margin-left:auto}#hint{font-size:12px;color:#607768}
+    @media(max-width:700px){header{padding:12px 16px}header p{font-size:11px}.tag{font-size:9px}h1{font-size:20px}main{flex-direction:column}aside{height:164px;width:100%;padding:12px 16px;border-left:0;border-top:1px solid #d1ddd3;display:grid;grid-template-columns:1fr 1fr;gap:0 14px}h2{font-size:16px;margin:4px 0}aside p{font-size:11px;margin:4px 0}.data{margin:7px 0;padding-top:6px}.data b{font-size:18px}.actions label{margin:0 0 6px}.actions select{padding:7px}.actions button{margin-top:8px!important;padding:8px}footer{padding:9px 12px;gap:5px;min-height:80px}footer button{padding:8px 10px}#hint{width:100%;font-size:10px}#stats{display:none}}
+  </style>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="app">
+  <header><div><h1>Sprout Yard</h1><p>A miniature garden center, built entirely from shapes.</p></div><span class="tag">Procedural world / 01</span></header>
+  <main>
+    <div id="stage" aria-label="Interactive isometric garden"><div id="loading" role="status">Loading the garden…</div></div>
+    <aside aria-label="Selection inspector">
+      <div><span class="tag">Yard inspector</span><h2 id="title">Choose an asset</h2><p id="description">Select a bed, cart, or building in the scene or list.</p><div class="data"><span id="metric-label">Harvest cycles</span><b id="metric">0</b></div></div>
+      <div class="actions"><label for="entities">Inspect an asset</label><select id="entities"><option value="">Choose an asset…</option></select><button id="plant" disabled>Plant this bed</button></div>
+    </aside>
+  </main>
+  <footer><button id="pause" aria-pressed="false">Pause</button><button id="rotate">Rotate view</button><button id="reset">Reset view</button><span id="hint">Drag to pan · Scroll or pinch to zoom · Tap an asset to inspect</span><span id="stats"></span></footer>
+</div>
+<script type="module">
+try { await import('./main.js'); }
+catch(error) { const loading=document.querySelector('#loading'); loading.hidden=false; loading.textContent='The 3D scene could not start. Check WebGL support and the CDN connection, then reload.'; console.error(error); }
+</script>
+</body>
+</html>

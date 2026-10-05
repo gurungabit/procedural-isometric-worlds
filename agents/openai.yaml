@@ -1,0 +1,4 @@
+interface:
+  display_name: "Procedural Isometric Worlds"
+  short_description: "Build procedural worlds and animated 3D assets"
+  default_prompt: "Use $procedural-isometric-worlds to build an articulated robot with waving, walking, and animated GLB export."
