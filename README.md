@@ -2,7 +2,7 @@
 
 A reusable Codex skill for building miniature Three.js worlds and articulated assets from code. Includes **Roo**, an animated robot, and **Sprout Yard**, an interactive garden center.
 
-[**Play with Roo →**](https://promptanddone.github.io/procedural-isometric-worlds/) · [Garden example](https://promptanddone.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb) · [Skill ZIP](procedural-isometric-worlds.zip)
+[**Play with Roo →**](https://gurungabit.github.io/procedural-isometric-worlds/) · [Garden example](https://gurungabit.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb) · [Skill ZIP](procedural-isometric-worlds.zip)
 
 ## What it builds
 
@@ -15,7 +15,7 @@ Roo supports **idle, wave, walk in place, and dance**, with accent colors, pause
 Clone this repository into your personal Codex skills directory:
 
 ```sh
-git clone https://github.com/promptanddone/procedural-isometric-worlds.git ~/.codex/skills/procedural-isometric-worlds
+git clone https://github.com/gurungabit/procedural-isometric-worlds.git ~/.codex/skills/procedural-isometric-worlds
 ```
 
 If that directory already exists, update the existing checkout or install the ZIP contents into it rather than cloning over it. The skill entrypoint is [SKILL.md](SKILL.md).
