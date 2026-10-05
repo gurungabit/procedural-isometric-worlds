@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f3f0e8">
+<meta name="description" content="Explore a detailed procedural rocket and take it from the launchpad to the sky.">
+<link rel="icon" type="image/svg+xml" href="icon.svg"><title>Aster · Launch a little extraordinary</title><link rel="stylesheet" href="style.css?v=1">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head><body>
+<svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-rocket" viewBox="0 0 24 24"><path d="M9 14c-2-4 0-9 6-12 3 6 2 11-2 13l-4-1Z M9 10 5 12l-1 5 5-3m5 0 1 5 4-3-2-5M8 18l-2 3m5-3-1 3"/><circle cx="13" cy="7" r="1.5"/></symbol>
+<symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15a8 8 0 0 1-11-11A8 8 0 1 0 20 15Z"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4Zm12-1a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+</defs></svg>
+<div class="app">
+<header><a href="./" class="brand" aria-label="Aster rocket home"><svg><use href="#i-rocket"/></svg>Aster<span class="brand-dot">.</span></a><span class="header-note">Small world. Infinite possibility.</span><span class="status"><i></i><span id="header-status">Systems ready</span></span></header>
+<main>
+<section class="viewer" aria-label="Interactive 3D rocket launch complex">
+<div class="intro"><h1>A little rocket.<br>A giant leap.</h1><p>Built from shapes. Bound for the stars.</p></div>
+<div id="stage"><div id="loading" role="status">Preparing the launchpad…</div></div>
+<div class="scene-label"><span class="live-dot"></span><span id="scene-label">PAD A · STANDING BY</span></div>
+<div class="view-tools"><span>Drag to orbit <b>·</b> Scroll to zoom</span><div><button id="sound" aria-label="Enable launch sound" aria-pressed="false" title="Launch sound"><svg><use href="#i-volume"/></svg><span class="off-slash"></span></button><button id="reset-camera" aria-label="Reset camera view" title="Reset view"><svg><use href="#i-reset"/></svg></button></div></div>
+<div class="countdown" id="countdown" hidden aria-hidden="true"><span id="count-number">5</span><small id="count-caption">ALL SYSTEMS GO</small></div>
+<div class="flight-message" id="flight-message" hidden><h2>Onward, Aster.</h2><p>One small world. A whole new horizon.</p></div>
+</section>
+<aside aria-label="Launch controls">
+<div class="mission-heading"><h2>Ready for liftoff?</h2><p>Meet Aster-01. A heavy-lift explorer with a little extra ambition.</p></div>
+<div class="vehicle"><span class="vehicle-mark">A / 01</span><div><strong>Aster-01</strong><span>Procedural launch vehicle</span></div></div>
+<section class="telemetry" aria-label="Simulated flight telemetry"><div class="section-title"><h3>Flight telemetry</h3><span>SIMULATION</span></div><dl><div><dt>Mission time</dt><dd id="mission-time">T − 00:05</dd></div><div><dt>Altitude</dt><dd><span id="altitude">0.00</span> <small>km</small></dd></div><div><dt>Velocity</dt><dd><span id="velocity">0</span> <small>m/s</small></dd></div><div><dt>Engine thrust</dt><dd><span id="thrust">0</span> <small>%</small></dd></div></dl></section>
+<section class="sequence" aria-label="Launch sequence"><h3>Launch sequence</h3><ol><li data-step="0" class="current"><span class="step-dot"></span><span>Preflight checks</span><small id="preflight">GO</small></li><li data-step="1"><span class="step-dot"></span><span>Service arms retract</span></li><li data-step="2"><span class="step-dot"></span><span>Engine ignition</span></li><li data-step="3"><span class="step-dot"></span><span>Liftoff</span></li><li data-step="4"><span class="step-dot"></span><span>Clear the tower</span></li></ol></section>
+<fieldset class="environment"><legend>Launch atmosphere</legend><div class="segmented"><button data-light="day" aria-pressed="true"><svg><use href="#i-sun"/></svg>Daylight</button><button data-light="night" aria-pressed="false"><svg><use href="#i-moon"/></svg>Nightfall</button></div></fieldset>
+<div class="playback"><button id="pause" aria-label="Pause animation" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>Pause</span></button><fieldset><legend class="sr-only">Playback speed</legend><button data-speed="1" aria-pressed="true">1×</button><button data-speed="2" aria-pressed="false">2×</button></fieldset></div>
+<div class="launch-actions"><button id="launch" class="launch"><svg><use href="#i-rocket"/></svg><span>Initiate launch</span><svg class="launch-arrow"><use href="#i-arrow"/></svg></button><button id="reset-mission" class="reset-mission" hidden>Reset mission</button><p id="launch-note" role="status" aria-live="polite">You’re the flight director. Make it fly.</p></div>
+</aside>
+</main><footer><span>A miniature world, made entirely with code.</span><div><a href="../robot/">Meet Roo</a><a href="rocket.js" download>Explore the rocket source <span aria-hidden="true">↗</span></a></div></footer>
+</div>
+<script type="module">try{await import('./main.js');}catch(error){document.querySelector('#loading').textContent='The launchpad could not load. Check your connection and WebGL support, then reload.';for(const b of document.querySelectorAll('button'))b.disabled=true;console.error(error);}</script>
+</body></html>
