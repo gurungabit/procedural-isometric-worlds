@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eef2f0">
+  <meta name="description" content="Fly Vela, a two-stage procedural rocket, from countdown to orbit: staging, fairing separation, and a satellite that unfolds its solar arrays.">
+  <title>Vela · From the pad to orbit</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head>
+<body>
+  <svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 2.5c2.9 2.4 4 5.6 4 9.6V17H8v-4.9c0-4 1.1-7.2 4-9.6Z"/><path d="m8 13-3 3.5V20l3-2m8-5 3 3.5V20l-3-2m-5.5 2.5h3"/><circle cx="12" cy="10" r="1.6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 11a8 8 0 1 1 2 7M4 4v7h7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+  </defs></svg>
+  <div class="app">
+    <header><a class="brand" href="./" aria-label="Vela home"><svg><use href="#i-rocket"/></svg>Vela</a><span class="header-note">A two-stage rocket, from the pad to orbit.</span><span class="status"><i></i><span id="status-text">Go for launch</span></span></header>
+    <main>
+      <section class="viewer" data-phase="pad" aria-label="Interactive 3D launch">
+        <div class="intro"><h1>Pad to orbit.</h1><p>Every part of Vela is built from code, down to the bolts on its legs.</p></div>
+        <div id="stage"><div id="loading" role="status">Rolling Vela out to the pad…</div></div>
+        <div id="countdown" class="countdown" aria-hidden="true"></div>
+        <div class="view-tools"><span>Drag to orbit, scroll to zoom<span class="key-hint">, Space to launch</span></span><button id="reset" aria-label="Reset camera view" title="Reset view"><svg><use href="#i-reset"/></svg></button></div>
+      </section>
+      <aside aria-label="Mission controls">
+        <div class="mission">
+          <h2>Vela V-1</h2>
+          <p>Light two-stage launcher. Payload: one small satellite with folding solar arrays.</p>
+          <div class="clock" id="clock">T−00:10</div>
+          <p class="phase" id="phase" role="status" aria-live="polite">Go for launch</p>
+        </div>
+        <dl class="telemetry" aria-label="Simulated telemetry"><div><dt>Altitude</dt><dd id="altitude">0.0 km</dd></div><div><dt>Speed</dt><dd id="speed">0 km/h</dd></div><div><dt>Throttle</dt><dd id="throttle">0%</dd></div></dl>
+        <section class="timeline" aria-labelledby="timeline-title"><h3 id="timeline-title">Flight plan</h3><ol id="events" class="events"></ol></section>
+        <div class="controls">
+          <div class="playback"><button id="pause" class="text-button" aria-pressed="false">Pause</button><div class="segmented" role="group" aria-label="Playback speed"><button data-warp="1" aria-pressed="true">1×</button><button data-warp="2" aria-pressed="false">2×</button><button data-warp="4" aria-pressed="false">4×</button></div></div>
+          <label class="follow"><input type="checkbox" id="follow" checked> Camera follows the vehicle</label>
+          <fieldset class="livery"><legend>Livery</legend><div class="swatches"><button data-color="#388f89" style="--swatch:#388f89" aria-label="Teal livery" aria-pressed="true"></button><button data-color="#d7983e" style="--swatch:#d7983e" aria-label="Amber livery" aria-pressed="false"></button><button data-color="#cd7160" style="--swatch:#cd7160" aria-label="Coral livery" aria-pressed="false"></button><button data-color="#7285bd" style="--swatch:#7285bd" aria-label="Periwinkle livery" aria-pressed="false"></button></div></fieldset>
+          <div class="model"><button id="export" class="download"><svg><use href="#i-download"/></svg>Download 3D model</button><p id="export-note" class="export-note" role="status">GLB with four animations: legs, fairing, arrays, engine gimbal.</p></div>
+        </div>
+        <div class="launch-actions"><button id="launch" class="launch"><svg><use href="#i-rocket"/></svg><span>Launch</span></button><button id="reset-mission" class="text-button reset-mission">Reset mission</button></div>
+      </aside>
+    </main>
+    <footer><span>A miniature world, made entirely with code.</span><span class="footer-links"><a href="../../">All showcases</a><a href="../rocket/">Launch Aster</a><a href="rocket.js" download>Rocket source</a></span></footer>
+  </div>
+  <script type="module">try{await import('./main.js');}catch(error){document.querySelector('#loading').textContent='Vela could not load. Check your WebGL support and connection, then reload.';for(const b of document.querySelectorAll('button'))b.disabled=true;console.error(error);}</script>
+</body>
+</html>

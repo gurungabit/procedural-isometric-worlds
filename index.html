@@ -1,2 +1,153 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aster · Launch a little extraordinary</title><meta http-equiv="refresh" content="0; url=./assets/rocket/"></head><body><a href="./assets/rocket/">Open the Aster rocket launch</a></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Procedural Isometric Worlds</title>
+<meta name="description" content="Four interactive Three.js miniature worlds built entirely from code: two rocket launches, an articulated robot, and a garden center.">
+<meta name="theme-color" content="#eef1ec">
+<meta property="og:title" content="Procedural Isometric Worlds">
+<meta property="og:description" content="Small worlds, built from code. Launch a rocket, fly one to orbit, wave at a robot, tend a garden.">
+<meta property="og:image" content="https://gurungabit.github.io/procedural-isometric-worlds/assets/showcase/aster.jpg">
+<link rel="canonical" href="https://gurungabit.github.io/procedural-isometric-worlds/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
+<style>
+:root{
+  --paper:#eef1ec;--grid:rgba(34,49,44,.075);--ink:#22312c;--muted:#56655e;--line:#cfd8d1;--plate:#e2e8e3;
+  --aster:#ba4729;--vela:#22406a;--roo:#2d7570;--yard:#32694a;
+  --gutter:clamp(20px,4vw,56px);color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{
+  margin:0;color:var(--ink);font-family:Archivo,system-ui,sans-serif;font-size:16px;line-height:1.55;font-stretch:100%;
+  /* Isometric drafting paper: verticals plus ±30° lines forming equilateral triangles. */
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='30.02'%3E%3Cpath d='M0 0V30.02M26 0V30.02M0 0L52 30.02M0 30.02L52 0' stroke='%2322312c' stroke-opacity='.075' fill='none'/%3E%3C/svg%3E") var(--paper);
+}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:4px;border-radius:2px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gutter)}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:26px}
+.wordmark{font-weight:750;font-stretch:118%;letter-spacing:-.01em;font-size:15px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.wordmark svg{width:22px;height:22px}
+.top nav{display:flex;gap:26px;font-size:15px}
+.top nav a{text-decoration:none}.top nav a:hover{text-decoration:underline;text-underline-offset:5px}
+
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:40px 28px;padding-block:28px 72px}
+.lead{grid-column:span 2;display:flex;flex-direction:column;padding-top:8px}
+h1{font-size:clamp(40px,4.6vw,66px);line-height:.98;font-weight:800;font-stretch:122%;letter-spacing:-.035em;margin:0 0 26px}
+.lead p{margin:0 0 22px;max-width:34ch;color:var(--muted);font-size:17px}
+.lead .more{margin-top:auto;font-size:15px;color:var(--muted);max-width:30ch}
+.lead .more a{color:var(--ink);font-weight:600;text-underline-offset:4px}
+
+.world{grid-column:span 2;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.world.wide{grid-column:span 3}
+.shot{position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--plate);aspect-ratio:3/4;transition:border-color .15s}
+.wide .shot{aspect-ratio:16/10}
+.shot img{display:block;width:100%;height:100%;object-fit:cover}
+.world:hover .shot,.world:focus-visible .shot{border-color:var(--accent)}
+.world:focus-visible{outline:none}.world:focus-visible .shot{outline:3px solid var(--accent);outline-offset:3px}
+.caption{padding:18px 2px 0;display:grid;grid-template-columns:1fr auto;column-gap:16px;align-items:baseline}
+.caption h2{margin:0;font-size:24px;font-weight:750;font-stretch:118%;letter-spacing:-.02em}
+.caption p{grid-column:1/-1;margin:8px 0 0;color:var(--muted);max-width:52ch;font-size:15px}
+.cta{font-size:15px;font-weight:600;color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;white-space:nowrap}
+.world:hover .cta,.world:focus-visible .cta{text-decoration-thickness:2px}
+.aster{--accent:var(--aster)}.vela{--accent:var(--vela)}.roo{--accent:var(--roo)}.yard{--accent:var(--yard)}
+
+.skill{display:grid;grid-template-columns:repeat(6,1fr);gap:28px;padding-block:56px 72px;border-top:1px solid var(--line)}
+.skill-copy{grid-column:span 2}
+.skill h2{font-size:clamp(28px,2.8vw,38px);line-height:1.05;font-weight:800;font-stretch:120%;letter-spacing:-.03em;margin:0 0 16px}
+.skill-copy p{margin:0;color:var(--muted);max-width:36ch}
+.skill-use{grid-column:span 4;display:flex;flex-direction:column;gap:22px}
+/* Grid items default to min-width:auto; let long content (the clone command) scroll instead of widening the page. */
+.lead,.world,.skill-copy,.skill-use,.command{min-width:0}
+.command{display:flex;align-items:stretch;border:1px solid var(--ink);border-radius:6px;background:#f7f9f6;overflow:hidden}
+.command code{flex:1;padding:16px 18px;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-x:auto;white-space:nowrap}
+.command button{border:0;border-left:1px solid var(--ink);background:var(--ink);color:#f7f9f6;font:600 14px Archivo,sans-serif;padding:0 20px;cursor:pointer;min-width:92px}
+.command button:hover{background:#34473f}
+blockquote{margin:0;padding-left:18px;border-left:3px solid var(--line);font-size:17px;max-width:62ch}
+.files{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:15px}
+.files a{font-weight:600;text-underline-offset:4px}
+
+.foot{display:flex;justify-content:space-between;gap:20px;padding-block:24px 34px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot a{text-underline-offset:4px}
+
+@media (max-width:1000px){
+  .gallery,.skill{grid-template-columns:repeat(2,1fr)}
+  .lead,.skill-copy,.skill-use{grid-column:1/-1}.lead .more{margin-top:0}
+  .world,.world.wide{grid-column:span 1}
+}
+@media (max-width:620px){
+  .top nav a:first-child{display:none}
+  .gallery,.skill{grid-template-columns:1fr}
+  .shot{aspect-ratio:4/5}.wide .shot{aspect-ratio:4/3}
+  .caption{grid-template-columns:1fr}.cta{margin-top:12px;grid-row:3}
+  .command{flex-direction:column}.command button{border-left:0;border-top:1px solid var(--ink);padding:12px}
+  .foot{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){.shot{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="wordmark" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20.5 7.4v9.2L12 21.5 3.5 16.6V7.4Z"/><path d="M12 12 20.5 7.4M12 12 3.5 7.4M12 12v9.5"/></svg>Procedural Isometric Worlds</a>
+    <nav aria-label="Project"><a href="#skill">Get the skill</a><a href="https://github.com/gurungabit/procedural-isometric-worlds">GitHub</a></nav>
+  </header>
+
+  <main>
+    <section class="gallery" aria-labelledby="title">
+      <div class="lead">
+        <h1 id="title">Small worlds, built from code.</h1>
+        <p>Four interactive Three.js scenes made from boxes, cylinders, and canvas textures. No model files, no build step. Pick one and play with it in your browser.</p>
+        <p class="more">Want your own? <a href="#skill">Install the skill</a> and describe the world you have in mind.</p>
+      </div>
+
+      <a class="world aster" href="assets/rocket/">
+        <div class="shot"><img src="assets/showcase/aster.jpg" width="600" height="800" alt="Aster, a white and orange heavy-lift rocket with two side boosters, lifting off beside its orange service tower on a small launch island."></div>
+        <div class="caption"><h2>Aster</h2><span class="cta">Launch Aster</span><p>Count down a nine-engine heavy lifter and watch it clear the tower, by day or by night, with optional launch sound.</p></div>
+      </a>
+
+      <a class="world vela" href="assets/vela/">
+        <div class="shot"><img src="assets/showcase/vela.jpg" width="600" height="800" alt="Vela's upper stage firing a blue flame against a starry sky as the two fairing halves fall away and reveal a satellite."></div>
+        <div class="caption"><h2>Vela</h2><span class="cta">Fly Vela</span><p>Take a two-stage rocket from the pad to orbit: staging, fairing separation, and a satellite that unfolds its solar arrays.</p></div>
+      </a>
+
+      <a class="world wide roo" href="assets/robot/">
+        <div class="shot"><img src="assets/showcase/roo.jpg" width="960" height="600" loading="lazy" alt="Roo, a cream and teal robot with a screen face, smiling and waving one arm."></div>
+        <div class="caption"><h2>Roo</h2><span class="cta">Meet Roo</span><p>An articulated robot that idles, waves, walks, and dances. Recolor it, then download it as an animated model.</p></div>
+      </a>
+
+      <a class="world wide yard" href="assets/starter/">
+        <div class="shot"><img src="assets/showcase/sprout-yard.jpg" width="960" height="600" loading="lazy" alt="Sprout Yard, a garden center with a green-roofed shop, a tool shed, four planting beds, and a delivery cart among round trees."></div>
+        <div class="caption"><h2>Sprout Yard</h2><span class="cta">Visit Sprout Yard</span><p>A garden center with delivery carts on the move and planting beds you can select, inspect, and plant.</p></div>
+      </a>
+    </section>
+
+    <section class="skill" id="skill" aria-labelledby="skill-title">
+      <div class="skill-copy">
+        <h2 id="skill-title">Build your own world.</h2>
+        <p>Every scene here was made with the procedural-isometric-worlds skill for Codex. Install it, then ask for a factory, a farm, a transport hub, or anything else small enough to sit on a desk.</p>
+      </div>
+      <div class="skill-use">
+        <div class="command"><code id="clone">git clone https://github.com/gurungabit/procedural-isometric-worlds.git ~/.codex/skills/procedural-isometric-worlds</code><button type="button" id="copy" aria-describedby="clone">Copy</button></div>
+        <blockquote>Use $procedural-isometric-worlds to build an interactive recycling depot with conveyors, sorting bins, and trucks.</blockquote>
+        <div class="files"><a href="procedural-isometric-worlds.zip" download>Download the skill as a ZIP</a><a href="models/roo-robot.glb" download>Download Roo as a GLB</a><a href="SKILL.md">Read the skill instructions</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><span>Every world runs in your browser with Three.js. Nothing to install.</span><a href="https://github.com/gurungabit/procedural-isometric-worlds">Source on GitHub</a></footer>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',async event=>{
+  const button=event.currentTarget;
+  try{await navigator.clipboard.writeText(document.getElementById('clone').textContent);button.textContent='Copied';}
+  catch{button.textContent='Select and copy';}
+  setTimeout(()=>{button.textContent='Copy';},2000);
+});
+</script>
+</body>
+</html>

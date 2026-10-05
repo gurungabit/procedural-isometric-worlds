@@ -1,6 +1,6 @@
 # Procedural Isometric Worlds
 
-This repository is a reusable skill and collection of browser previews for constructing miniature Three.js worlds and articulated assets from procedural geometry and canvas textures. Its current homepage opens **Aster**, a rocket launch experience at `assets/rocket/`. The original Roo robot and Sprout Yard previews remain separate examples.
+This repository is a reusable skill and collection of browser previews for constructing miniature Three.js worlds and articulated assets from procedural geometry and canvas textures. Its homepage is a gallery linking four previews: **Aster**, a rocket launch experience at `assets/rocket/`; **Vela**, a two-stage flight to orbit at `assets/vela/`; and the original Roo robot and Sprout Yard examples.
 
 The rocket work answers the request to use the existing project as a guide for a high-quality rocket with animation and liftoff. The experience lets a visitor inspect the vehicle and launch complex, act as flight director, and watch the transition from a five-second countdown to ascent. It also gives developers readable factories they can reuse in their own scenes. These are intended uses inferred from the implemented preview and source, not research findings about an established audience.
 

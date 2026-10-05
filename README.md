@@ -1,8 +1,8 @@
 # Procedural Isometric Worlds
 
-A reusable Codex skill for building miniature Three.js worlds and articulated assets from code. Includes **Aster**, an animated rocket launch complex, **Roo**, an articulated robot, and **Sprout Yard**, an interactive garden center.
+A reusable Codex skill for building miniature Three.js worlds and articulated assets from code. Includes **Aster**, an animated rocket launch complex, **Vela**, a two-stage rocket that flies from the pad to orbit, **Roo**, an articulated robot, and **Sprout Yard**, an interactive garden center.
 
-[**Launch Aster →**](https://gurungabit.github.io/procedural-isometric-worlds/) · [Robot example](https://gurungabit.github.io/procedural-isometric-worlds/assets/robot/) · [Garden example](https://gurungabit.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb) · [Skill ZIP](procedural-isometric-worlds.zip)
+[**Browse all showcases →**](https://gurungabit.github.io/procedural-isometric-worlds/) · [Aster](https://gurungabit.github.io/procedural-isometric-worlds/assets/rocket/) · [Vela](https://gurungabit.github.io/procedural-isometric-worlds/assets/vela/) · [Robot example](https://gurungabit.github.io/procedural-isometric-worlds/assets/robot/) · [Garden example](https://gurungabit.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb) · [Skill ZIP](procedural-isometric-worlds.zip)
 
 ## What it builds
 
@@ -34,7 +34,7 @@ From the repository root:
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8000/` for Aster, `http://127.0.0.1:8000/assets/robot/` for Roo or `http://127.0.0.1:8000/assets/starter/` for Sprout Yard. No build step or backend is required. The previews load matching Three.js **0.180.0** core/addon modules from jsDelivr; a CDN connection is required.
+Open `http://127.0.0.1:8000/` for the showcase gallery, or go straight to `assets/rocket/` (Aster), `assets/vela/` (Vela), `assets/robot/` (Roo), or `assets/starter/` (Sprout Yard). No build step or backend is required. The previews load matching Three.js **0.180.0** core/addon modules from jsDelivr; a CDN connection is required.
 
 ## Launch Aster
 
@@ -55,6 +55,22 @@ kit.dispose();
 
 The reusable rocket factory is independent of the preview. Launch animation, exhaust shaders, particle effects, and sound run in `assets/rocket/main.js`; they are not baked animation clips or a downloadable animated GLB. The preview uses Three.js 0.180.0 from jsDelivr and DM Sans / Manrope from Google Fonts. No build step is needed.
 
+## Fly Vela
+
+Vela is a two-stage rocket on a compact island launch pad. Press **Launch** (or Space) for a ten-second countdown: the crew arm swings away, the engines light, exhaust rolls out of both ends of the flame trench, and the hold-down clamps release. In flight the landing legs fold up, the vehicle pitches over, the booster separates and tumbles away, the upper stage lights a blue vacuum flame, the fairing splits open, and the satellite drifts free and unfolds its solar arrays above the Earth's horizon. The camera follows the vehicle the whole way; 1×/2×/4× playback, pause, reset, and four liveries are in the sidebar. Telemetry is illustrative.
+
+```js
+import {createRocket} from './assets/vela/rocket.js';
+const rocket = createRocket({accent:'#388f89'});
+scene.add(rocket.group);
+rocket.setThrust('booster', 1);   // plume and nozzle glow
+rocket.setLegs(0);                // 1 = deployed, 0 = stowed
+// Each frame, with elapsed and delta seconds:
+rocket.update(elapsed, dt);
+```
+
+`createLaunchPad` lives in `assets/vela/pad.js`; smoke, sky, stars, and clouds are in `assets/vela/effects.js`; the mission timeline and camera are in `assets/vela/main.js`. **Download 3D model** exports a GLB with four baked clips (legs stow, fairing open, arrays deploy, engine gimbal). The exhaust plumes are shaders and stay in the live preview.
+
 ## Reuse the robot
 
 ```js
@@ -70,19 +86,23 @@ Use an outer placement group for movement through the world. `robot.createAnimat
 ## Repository layout
 
 - `SKILL.md`, `agents/`, `references/`: skill instructions and supporting guidance.
-- `assets/rocket/`: reusable rocket factory, detailed launch complex, and interactive launch simulation.
+- `assets/rocket/`: Aster: reusable rocket factory, detailed launch complex, and interactive launch simulation.
+- `assets/vela/`: Vela: two-stage rocket factory with articulated legs, fairing, and satellite; island launch pad; flight to orbit; animated GLB export.
+- `assets/showcase/`: gallery thumbnails captured from each preview.
 - `assets/robot/`: original robot factory and interactive preview.
 - `assets/starter/`: original garden-center example.
 - `models/roo-robot.glb`: reusable model with four animation clips.
 - `procedural-isometric-worlds.zip`: portable skill bundle.
-- `index.html`, `.nojekyll`: GitHub Pages entrypoint and static publishing configuration.
+- `index.html`, `.nojekyll`: GitHub Pages showcase gallery and static publishing configuration.
 
-GitHub Pages publishes `main` from the repository root. The homepage opens the rocket launch; relative asset paths also work on project Pages URLs.
+GitHub Pages publishes `main` from the repository root. The homepage is a gallery that links to every showcase; relative asset paths also work on project Pages URLs.
 
 ## Reference and verification
 
 The construction approach was studied in [siddik-web/waretrack](https://github.com/siddik-web/waretrack), pinned in the [rendering analysis](references/waretrack-rendering.md). The included examples are newly written; WareTrack source and media are not included.
 
 Verified locally for Aster: complete launch/ascent/replay, countdown and arm retraction, camera tracking, pause/resume, speed and atmosphere controls, audio toggle, real drag/zoom/reset, reduced-motion behavior, 360px and 390px mobile layouts, no console errors, and stable GPU resource counts over repeated resets.
+
+Verified locally for Vela: countdown through orbit at 1× and 4× with the camera keeping the vehicle in frame, staging and fairing separation, solar-array deploy, reset, livery changes, GLB export reloaded through GLTFLoader with all four clips moving their joints, desktop and 390px layouts, and no console errors.
 
 Original robot verification: skill metadata, JavaScript syntax, desktop/mobile framing, articulated motion, pause/resume, recoloring, GLB structure, and Wave playback after GLTFLoader/AnimationMixer import.
