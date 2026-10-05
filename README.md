@@ -4,6 +4,8 @@ A reusable Codex skill for building miniature Three.js worlds and articulated as
 
 [**Browse all showcases →**](https://gurungabit.github.io/procedural-isometric-worlds/) · [Aster](https://gurungabit.github.io/procedural-isometric-worlds/assets/rocket/) · [Vela](https://gurungabit.github.io/procedural-isometric-worlds/assets/vela/) · [Robot example](https://gurungabit.github.io/procedural-isometric-worlds/assets/robot/) · [Garden example](https://gurungabit.github.io/procedural-isometric-worlds/assets/starter/) · [Animated robot GLB](models/roo-robot.glb)
 
+The homepage is an open gallery with a live 3D selector for all four worlds. Rotate a preview, pause its animation, or open the complete demo. The collection uses transparent renders of the original procedural models.
+
 ## What it builds
 
 Assets are assembled from boxes, cylinders, spheres, custom geometry, and canvas textures. The skill covers orthographic framing, coordinated materials, lighting/shadows, reusable factories, articulated joints, simulation-driven transforms, selection, batching, and GPU resource ownership.
@@ -88,17 +90,20 @@ Use an outer placement group for movement through the world. `robot.createAnimat
 - `SKILL.md`, `agents/`, `references/`: skill instructions and supporting guidance.
 - `assets/rocket/`: Aster: reusable rocket factory, detailed launch complex, and interactive launch simulation.
 - `assets/vela/`: Vela: two-stage rocket factory with articulated legs, fairing, and satellite; island launch pad; flight to orbit; animated GLB export.
-- `assets/showcase/`: gallery thumbnails captured from each preview.
+- `assets/landing/`: homepage styles, live 3D selector, transparent procedural renders, and self-hosted Outfit / DM Sans fonts with licenses.
+- `assets/showcase/`: original demo screenshots, including the social preview image.
 - `assets/robot/`: original robot factory and interactive preview.
 - `assets/starter/`: original garden-center example.
 - `models/roo-robot.glb`: reusable model with four animation clips.
 - `index.html`, `.nojekyll`: GitHub Pages showcase gallery and static publishing configuration.
 
-GitHub Pages publishes `main` from the repository root. The homepage is a gallery that links to every showcase; relative asset paths also work on project Pages URLs.
+GitHub Pages publishes `main` from the repository root. The homepage is an interactive gallery that links to every showcase; relative asset paths also work on project Pages URLs. Static previews and navigation remain available when WebGL or the CDN cannot load.
 
 ## Reference and verification
 
 The construction approach was studied in [siddik-web/waretrack](https://github.com/siddik-web/waretrack), pinned in the [rendering analysis](references/waretrack-rendering.md). The included examples are newly written; WareTrack source and media are not included.
+
+Verified locally for the landing page: all four preview selections, pause/resume, camera reset, copy buttons, local navigation/assets, and desktop / 390px layouts without horizontal overflow. Reduced motion starts the preview paused; offscreen scenes stop advancing.
 
 Verified locally for Aster: complete launch/ascent/replay, countdown and arm retraction, camera tracking, pause/resume, speed and atmosphere controls, audio toggle, real drag/zoom/reset, reduced-motion behavior, 360px and 390px mobile layouts, no console errors, and stable GPU resource counts over repeated resets.
 

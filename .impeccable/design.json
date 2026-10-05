@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-05T18:16:23.274427+00:00",
-  "title": "Design System: Aster — Procedural Isometric Worlds",
+  "generatedAt": "2026-10-05T19:48:06.477848+00:00",
+  "title": "Design System: Procedural Isometric Worlds \u2014 Homepage and Aster",
   "extensions": {
     "colorMeta": {
       "bg": {
@@ -353,6 +353,188 @@
           "oklch(83.57% 0.06083 133.30)",
           "oklch(95.00% 0.06083 133.30)"
         ]
+      },
+      "homepage-paper": {
+        "role": "neutral",
+        "displayName": "Homepage paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00567 128.52)",
+          "oklch(26.43% 0.00567 128.52)",
+          "oklch(37.86% 0.00567 128.52)",
+          "oklch(49.29% 0.00567 128.52)",
+          "oklch(60.71% 0.00567 128.52)",
+          "oklch(72.14% 0.00567 128.52)",
+          "oklch(83.57% 0.00567 128.52)",
+          "oklch(95.00% 0.00567 128.52)"
+        ]
+      },
+      "homepage-ink": {
+        "role": "neutral",
+        "displayName": "Homepage ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.03938 157.60)",
+          "oklch(26.43% 0.03938 157.60)",
+          "oklch(37.86% 0.03938 157.60)",
+          "oklch(49.29% 0.03938 157.60)",
+          "oklch(60.71% 0.03938 157.60)",
+          "oklch(72.14% 0.03938 157.60)",
+          "oklch(83.57% 0.03938 157.60)",
+          "oklch(95.00% 0.03938 157.60)"
+        ]
+      },
+      "homepage-muted": {
+        "role": "neutral",
+        "displayName": "Homepage muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.02918 148.69)",
+          "oklch(26.43% 0.02918 148.69)",
+          "oklch(37.86% 0.02918 148.69)",
+          "oklch(49.29% 0.02918 148.69)",
+          "oklch(60.71% 0.02918 148.69)",
+          "oklch(72.14% 0.02918 148.69)",
+          "oklch(83.57% 0.02918 148.69)",
+          "oklch(95.00% 0.02918 148.69)"
+        ]
+      },
+      "homepage-green": {
+        "role": "primary",
+        "displayName": "Homepage green",
+        "tonalRamp": [
+          "oklch(15.00% 0.06029 153.31)",
+          "oklch(26.43% 0.06029 153.31)",
+          "oklch(37.86% 0.06029 153.31)",
+          "oklch(49.29% 0.06029 153.31)",
+          "oklch(60.71% 0.06029 153.31)",
+          "oklch(72.14% 0.06029 153.31)",
+          "oklch(83.57% 0.06029 153.31)",
+          "oklch(95.00% 0.06029 153.31)"
+        ]
+      },
+      "homepage-green-hover": {
+        "role": "primary",
+        "displayName": "Homepage green hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.04973 154.75)",
+          "oklch(26.43% 0.04973 154.75)",
+          "oklch(37.86% 0.04973 154.75)",
+          "oklch(49.29% 0.04973 154.75)",
+          "oklch(60.71% 0.04973 154.75)",
+          "oklch(72.14% 0.04973 154.75)",
+          "oklch(83.57% 0.04973 154.75)",
+          "oklch(95.00% 0.04973 154.75)"
+        ]
+      },
+      "homepage-line": {
+        "role": "neutral",
+        "displayName": "Homepage line",
+        "tonalRamp": [
+          "oklch(15.00% 0.02118 134.10)",
+          "oklch(26.43% 0.02118 134.10)",
+          "oklch(37.86% 0.02118 134.10)",
+          "oklch(49.29% 0.02118 134.10)",
+          "oklch(60.71% 0.02118 134.10)",
+          "oklch(72.14% 0.02118 134.10)",
+          "oklch(83.57% 0.02118 134.10)",
+          "oklch(95.00% 0.02118 134.10)"
+        ]
+      },
+      "homepage-deep": {
+        "role": "neutral",
+        "displayName": "Homepage deep",
+        "tonalRamp": [
+          "oklch(15.00% 0.04563 156.33)",
+          "oklch(26.43% 0.04563 156.33)",
+          "oklch(37.86% 0.04563 156.33)",
+          "oklch(49.29% 0.04563 156.33)",
+          "oklch(60.71% 0.04563 156.33)",
+          "oklch(72.14% 0.04563 156.33)",
+          "oklch(83.57% 0.04563 156.33)",
+          "oklch(95.00% 0.04563 156.33)"
+        ]
+      },
+      "homepage-light": {
+        "role": "neutral",
+        "displayName": "Homepage light",
+        "tonalRamp": [
+          "oklch(15.00% 0.01795 123.97)",
+          "oklch(26.43% 0.01795 123.97)",
+          "oklch(37.86% 0.01795 123.97)",
+          "oklch(49.29% 0.01795 123.97)",
+          "oklch(60.71% 0.01795 123.97)",
+          "oklch(72.14% 0.01795 123.97)",
+          "oklch(83.57% 0.01795 123.97)",
+          "oklch(95.00% 0.01795 123.97)"
+        ]
+      },
+      "homepage-light-muted": {
+        "role": "neutral",
+        "displayName": "Homepage light muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.03661 133.59)",
+          "oklch(26.43% 0.03661 133.59)",
+          "oklch(37.86% 0.03661 133.59)",
+          "oklch(49.29% 0.03661 133.59)",
+          "oklch(60.71% 0.03661 133.59)",
+          "oklch(72.14% 0.03661 133.59)",
+          "oklch(83.57% 0.03661 133.59)",
+          "oklch(95.00% 0.03661 133.59)"
+        ]
+      },
+      "homepage-highlight": {
+        "role": "primary",
+        "displayName": "Homepage highlight",
+        "tonalRamp": [
+          "oklch(15.00% 0.09940 137.73)",
+          "oklch(26.43% 0.09940 137.73)",
+          "oklch(37.86% 0.09940 137.73)",
+          "oklch(49.29% 0.09940 137.73)",
+          "oklch(60.71% 0.09940 137.73)",
+          "oklch(72.14% 0.09940 137.73)",
+          "oklch(83.57% 0.09940 137.73)",
+          "oklch(95.00% 0.09940 137.73)"
+        ]
+      },
+      "homepage-focus": {
+        "role": "primary",
+        "displayName": "Homepage focus",
+        "tonalRamp": [
+          "oklch(15.00% 0.13348 49.95)",
+          "oklch(26.43% 0.13348 49.95)",
+          "oklch(37.86% 0.13348 49.95)",
+          "oklch(49.29% 0.13348 49.95)",
+          "oklch(60.71% 0.13348 49.95)",
+          "oklch(72.14% 0.13348 49.95)",
+          "oklch(83.57% 0.13348 49.95)",
+          "oklch(95.00% 0.13348 49.95)"
+        ]
+      },
+      "homepage-copy": {
+        "role": "primary",
+        "displayName": "Homepage copy",
+        "tonalRamp": [
+          "oklch(15.00% 0.04832 126.80)",
+          "oklch(26.43% 0.04832 126.80)",
+          "oklch(37.86% 0.04832 126.80)",
+          "oklch(49.29% 0.04832 126.80)",
+          "oklch(60.71% 0.04832 126.80)",
+          "oklch(72.14% 0.04832 126.80)",
+          "oklch(83.57% 0.04832 126.80)",
+          "oklch(95.00% 0.04832 126.80)"
+        ]
+      },
+      "homepage-copy-hover": {
+        "role": "primary",
+        "displayName": "Homepage copy hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.03523 126.52)",
+          "oklch(26.43% 0.03523 126.52)",
+          "oklch(37.86% 0.03523 126.52)",
+          "oklch(49.29% 0.03523 126.52)",
+          "oklch(60.71% 0.03523 126.52)",
+          "oklch(72.14% 0.03523 126.52)",
+          "oklch(83.57% 0.03523 126.52)",
+          "oklch(95.00% 0.03523 126.52)"
+        ]
       }
     },
     "typographyMeta": {
@@ -375,6 +557,30 @@
       "section-title": {
         "displayName": "Section title",
         "purpose": "Telemetry and sequence headings."
+      },
+      "homepage-display": {
+        "displayName": "Homepage display",
+        "purpose": "Homepage introduction."
+      },
+      "homepage-headline": {
+        "displayName": "Homepage headline",
+        "purpose": "Homepage collection heading."
+      },
+      "homepage-world-title": {
+        "displayName": "Homepage world title",
+        "purpose": "Homepage demo titles."
+      },
+      "homepage-body": {
+        "displayName": "Homepage body",
+        "purpose": "Homepage base text."
+      },
+      "homepage-action": {
+        "displayName": "Homepage action",
+        "purpose": "Homepage primary action."
+      },
+      "homepage-code": {
+        "displayName": "Homepage code",
+        "purpose": "Homepage install command."
       }
     },
     "shadows": [
@@ -393,7 +599,7 @@
       {
         "name": "countdown",
         "value": "5s",
-        "purpose": "Simulation countdown from T − 5 to liftoff."
+        "purpose": "Simulation countdown from T \u2212 5 to liftoff."
       },
       {
         "name": "mission-completion",
@@ -402,8 +608,23 @@
       },
       {
         "name": "camera-follow",
-        "value": "max(0, 0.12 × flightTime² − 2)",
+        "value": "max(0, 0.12 \u00d7 flightTime\u00b2 \u2212 2)",
         "purpose": "Vertical orthographic camera tracking during accelerating ascent."
+      },
+      {
+        "name": "homepage-primary-hover",
+        "value": "background .18s",
+        "purpose": "Primary action; removed with reduced motion."
+      },
+      {
+        "name": "homepage-object-hover",
+        "value": "transform .45s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Catalog image moves up 4px; removed with reduced motion."
+      },
+      {
+        "name": "homepage-preview-lifecycle",
+        "value": "paused || !inView || document.hidden \u2192 dt=0; offscreen/hidden \u2192 no render",
+        "purpose": "Model animation starts paused under reduced motion and freezes outside the observed viewport region or while hidden."
       }
     ],
     "breakpoints": [
@@ -426,104 +647,211 @@
       {
         "name": "compact-desktop-height-max",
         "value": "900px"
+      },
+      {
+        "name": "homepage-wide-min",
+        "value": "1440px"
+      },
+      {
+        "name": "homepage-medium-max",
+        "value": "1100px"
+      },
+      {
+        "name": "homepage-stack-max",
+        "value": "800px"
+      },
+      {
+        "name": "homepage-single-column-max",
+        "value": "520px"
       }
-    ]
+    ],
+    "scopeMeta": {
+      "homepage": {
+        "paths": [
+          "index.html",
+          "assets/landing/"
+        ],
+        "tokenPrefix": "homepage-",
+        "componentNamePrefix": "Homepage \u2014"
+      },
+      "aster": {
+        "paths": [
+          "assets/rocket/"
+        ],
+        "tokens": "Existing unprefixed frontmatter tokens",
+        "componentNamePrefix": "Aster demo \u2014",
+        "narrative": {
+          "northStar": "The miniature launch world",
+          "overview": "Aster extends the repository's procedural miniature-world grammar into a launch complex. Warm surfaces, an ivory vehicle, orange and copper detailing, and visible industrial structure make the scene feel tangible. Orthographic framing presents the model as a small constructed world that can be inspected from multiple angles.\n\nThe interface pairs a spacious scene with a compact mission panel. Manrope gives headlines a rounded, confident presence; DM Sans keeps the operational information quiet. Motion expresses machinery and progression: hinged service arms, ignition, accelerating ascent, camera following, and changing mission state.\n\nThis name is a descriptive record of the implementation, not a separately approved brand metaphor. Tokens are extracted from `assets/rocket/style.css` and the exported palette in `rocket.js`. This system describes Aster; it does not claim that the earlier robot and garden previews share every token.",
+          "keyCharacteristics": [
+            "Warm paper interface beside a procedural industrial diorama.",
+            "Ivory vehicle with orange markings and steel detail.",
+            "Orthographic inspection with soft cast shadows.",
+            "Compact semantic mission controls and explicit animation state."
+          ],
+          "rules": [
+            {
+              "name": "The Scene Scope Rule",
+              "body": "Nightfall changes the scene and its overlays; it does not recolor the entire mission interface.",
+              "section": "colors"
+            },
+            {
+              "name": "The Scene and Mission Rule",
+              "body": "Keep scene inspection and mission controls legible as distinct regions, preserving their stacked order on small screens.",
+              "section": "layout"
+            }
+          ],
+          "dos": [
+            "Do reuse the exported procedural material palette for related rocket and launch-complex geometry.",
+            "Do pair mission status with text and semantic pressed or disabled state.",
+            "Do keep orthographic inspection and soft cast shadows central to the miniature-world presentation.",
+            "Do retain visible focus outlines and the reduced-motion paused start."
+          ],
+          "donts": [
+            "Don't infer a whole-page dark theme from the scene-scoped nightfall treatment.",
+            "Don't describe the illustrative telemetry as a physically validated flight simulation.",
+            "Don't substitute hard opaque geometry for the camera-facing translucent exhaust and smoke treatment.",
+            "Don't turn observed 11px supporting text into a required size for new surfaces."
+          ]
+        }
+      }
+    }
   },
   "components": [
     {
-      "name": "Mission action",
+      "name": "Aster demo \u2014 Mission action",
       "kind": "button",
       "refersTo": "button-primary",
       "description": "The full-width action starts or repeats a launch.",
       "html": "<button class=\"ds-launch\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M9 14c-2-4 0-9 6-12 3 6 2 11-2 13l-4-1Z M9 10 5 12l-1 5 5-3m5 0 1 5 4-3-2-5M8 18l-2 3m5-3-1 3\"/><circle cx=\"13\" cy=\"7\" r=\"1.5\"/></svg><span>Initiate launch</span><svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></button>",
-      "css": ".ds-launch{font-family:'DM Sans',sans-serif;width:100%;min-height:49px;display:flex;align-items:center;gap:10px;background:var(--accent,#ba4729);color:#fff9ed;border:0;border-radius:8px;padding:12px 16px;font-size:12px;font-weight:600;cursor:pointer;transition:background .2s,transform .2s}.ds-launch svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}.ds-launch .ds-arrow{margin-left:auto;width:17px}.ds-launch:hover:not(:disabled){background:#a63b20;transform:translateY(-1px)}.ds-launch:focus-visible{outline:3px solid var(--accent,#ba4729);outline-offset:4px}.ds-launch:disabled{cursor:default;opacity:.55}@media(prefers-reduced-motion:reduce){.ds-launch{transition:none}}"
+      "css": ".ds-launch{font-family:'DM Sans',sans-serif;width:100%;min-height:49px;display:flex;align-items:center;gap:10px;background:#ba4729;color:#fff9ed;border:0;border-radius:8px;padding:12px 16px;font-size:12px;font-weight:600;cursor:pointer;transition:background .2s,transform .2s}.ds-launch svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}.ds-launch .ds-arrow{margin-left:auto;width:17px}.ds-launch:hover:not(:disabled){background:#a63b20;transform:translateY(-1px)}.ds-launch:focus-visible{outline:3px solid #ba4729;outline-offset:4px}.ds-launch:disabled{cursor:default;opacity:.55}@media(prefers-reduced-motion:reduce){.ds-launch{transition:none}}"
     },
     {
-      "name": "Camera reset",
+      "name": "Aster demo \u2014 Camera reset",
       "kind": "button",
       "refersTo": "button-camera",
       "description": "Circular scene inspection control.",
       "html": "<button class=\"ds-camera\" aria-label=\"Reset camera view\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 10a8 8 0 1 1 1 7M4 4v6h6\"/></svg></button>",
-      "css": ".ds-camera{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line,#dadbd0);border-radius:50%;background:var(--paper,#faf8f2);color:var(--muted,#62675c);cursor:pointer}.ds-camera svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;width:17px;height:17px}.ds-camera:hover{background:#e8e6dc}.ds-camera:focus-visible{outline:3px solid var(--accent,#ba4729);outline-offset:4px}"
+      "css": ".ds-camera{display:grid;place-items:center;width:38px;height:38px;border:1px solid #dadbd0;border-radius:50%;background:#faf8f2;color:#62675c;cursor:pointer}.ds-camera svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;width:17px;height:17px}.ds-camera:hover{background:#e8e6dc}.ds-camera:focus-visible{outline:3px solid #ba4729;outline-offset:4px}"
     },
     {
-      "name": "Atmosphere selection",
+      "name": "Aster demo \u2014 Atmosphere selection",
       "kind": "custom",
       "refersTo": "button-segment",
       "description": "Pressed state selects the scene lighting, with a tonal track and soft selected shadow.",
       "html": "<fieldset class=\"ds-environment\"><legend>Launch atmosphere</legend><div class=\"ds-segmented\"><button aria-pressed=\"true\">Daylight</button><button aria-pressed=\"false\">Nightfall</button></div></fieldset>",
-      "css": ".ds-environment{font-family:'DM Sans',sans-serif;padding:0;border:0;margin:0;color:var(--ink,#2b352f)}.ds-environment legend{font-size:12px;font-weight:650;margin-bottom:12px}.ds-segmented{display:flex;background:#eeece2;padding:4px;border-radius:9px;gap:4px}.ds-segmented button{font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:7px;min-height:35px;flex:1;border:0;border-radius:6px;background:transparent;font-size:11px;color:inherit;cursor:pointer}.ds-segmented button[aria-pressed=true]{background:var(--paper,#faf8f2);box-shadow:0 2px 5px #353a2810}.ds-segmented button:hover{color:var(--accent,#ba4729)}.ds-segmented button:focus-visible{outline:3px solid var(--accent,#ba4729);outline-offset:4px}"
+      "css": ".ds-environment{font-family:'DM Sans',sans-serif;padding:0;border:0;margin:0;color:#2b352f}.ds-environment legend{font-size:12px;font-weight:650;margin-bottom:12px}.ds-segmented{display:flex;background:#eeece2;padding:4px;border-radius:9px;gap:4px}.ds-segmented button{font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:7px;min-height:35px;flex:1;border:0;border-radius:6px;background:transparent;font-size:11px;color:inherit;cursor:pointer}.ds-segmented button[aria-pressed=true]{background:#faf8f2;box-shadow:0 2px 5px #353a2810}.ds-segmented button:hover{color:#ba4729}.ds-segmented button:focus-visible{outline:3px solid #ba4729;outline-offset:4px}"
     },
     {
-      "name": "Playback speed",
+      "name": "Aster demo \u2014 Playback speed",
       "kind": "button",
       "refersTo": "button-speed-selected",
       "description": "Two compact options expose simulation speed through pressed state.",
-      "html": "<div class=\"ds-speed\" role=\"group\" aria-label=\"Playback speed\"><button aria-pressed=\"true\">1×</button><button aria-pressed=\"false\">2×</button></div>",
-      "css": ".ds-speed{display:flex;gap:3px}.ds-speed button{font-family:'DM Sans',sans-serif;border:0;background:transparent;border-radius:5px;padding:5px 8px;font-size:11px;color:var(--ink,#2b352f);cursor:pointer}.ds-speed button[aria-pressed=true]{background:#e8e9dc}.ds-speed button:focus-visible{outline:3px solid var(--accent,#ba4729);outline-offset:4px}"
+      "html": "<div class=\"ds-speed\" role=\"group\" aria-label=\"Playback speed\"><button aria-pressed=\"true\">1\u00d7</button><button aria-pressed=\"false\">2\u00d7</button></div>",
+      "css": ".ds-speed{display:flex;gap:3px}.ds-speed button{font-family:'DM Sans',sans-serif;border:0;background:transparent;border-radius:5px;padding:5px 8px;font-size:11px;color:#2b352f;cursor:pointer}.ds-speed button[aria-pressed=true]{background:#e8e9dc}.ds-speed button:focus-visible{outline:3px solid #ba4729;outline-offset:4px}"
     },
     {
-      "name": "Flight telemetry",
+      "name": "Aster demo \u2014 Flight telemetry",
       "kind": "custom",
       "description": "Open definition-list rows with aligned tabular numbers, rather than boxed metric cards.",
-      "html": "<section class=\"ds-telemetry\" aria-label=\"Simulated flight telemetry\"><h3>Flight telemetry</h3><dl><div><dt>Mission time</dt><dd>T − 00:05</dd></div><div><dt>Altitude</dt><dd>0.00 <small>km</small></dd></div><div><dt>Velocity</dt><dd>0 <small>m/s</small></dd></div><div><dt>Engine thrust</dt><dd>0 <small>%</small></dd></div></dl></section>",
-      "css": ".ds-telemetry{font-family:'DM Sans',sans-serif;color:var(--ink,#2b352f);background:var(--paper,#faf8f2)}.ds-telemetry h3{font-size:12px;font-weight:650;margin:0}.ds-telemetry dl{margin:15px 0 0}.ds-telemetry dl>div{display:flex;align-items:baseline;justify-content:space-between;margin-top:12px;font-size:12px}.ds-telemetry dt{color:var(--muted,#62675c)}.ds-telemetry dd{margin:0;font-variant-numeric:tabular-nums;font-weight:600}.ds-telemetry small{font-size:11px;font-weight:400;color:var(--muted,#62675c)}"
+      "html": "<section class=\"ds-telemetry\" aria-label=\"Simulated flight telemetry\"><h3>Flight telemetry</h3><dl><div><dt>Mission time</dt><dd>T \u2212 00:05</dd></div><div><dt>Altitude</dt><dd>0.00 <small>km</small></dd></div><div><dt>Velocity</dt><dd>0 <small>m/s</small></dd></div><div><dt>Engine thrust</dt><dd>0 <small>%</small></dd></div></dl></section>",
+      "css": ".ds-telemetry{font-family:'DM Sans',sans-serif;color:#2b352f;background:#faf8f2}.ds-telemetry h3{font-size:12px;font-weight:650;margin:0}.ds-telemetry dl{margin:15px 0 0}.ds-telemetry dl>div{display:flex;align-items:baseline;justify-content:space-between;margin-top:12px;font-size:12px}.ds-telemetry dt{color:#62675c}.ds-telemetry dd{margin:0;font-variant-numeric:tabular-nums;font-weight:600}.ds-telemetry small{font-size:11px;font-weight:400;color:#62675c}"
     },
     {
-      "name": "Launch sequence",
+      "name": "Aster demo \u2014 Launch sequence",
       "kind": "custom",
       "description": "Connected ordered dots encode upcoming, current, and complete phases.",
       "html": "<section class=\"ds-sequence\"><h3>Launch sequence</h3><ol><li class=\"ds-done\"><span></span>Preflight checks</li><li class=\"ds-current\"><span></span>Service arms retract</li><li><span></span>Engine ignition</li><li><span></span>Liftoff</li><li><span></span>Clear the tower</li></ol></section>",
-      "css": ".ds-sequence{font-family:'DM Sans',sans-serif;border-top:1px solid var(--line,#dadbd0);padding-top:20px}.ds-sequence h3{font-size:12px;font-weight:650;margin:0;color:var(--ink,#2b352f)}.ds-sequence ol{list-style:none;margin:15px 0 0;padding:0}.ds-sequence li{position:relative;display:flex;align-items:center;gap:11px;min-height:28px;font-size:11px;color:var(--muted,#62675c)}.ds-sequence li>span{width:7px;height:7px;border:1px solid #a6b09e;border-radius:50%;background:var(--paper,#faf8f2);z-index:1}.ds-sequence li:not(:last-child):after{content:\"\";position:absolute;left:3px;top:18px;width:1px;height:21px;background:var(--line,#dadbd0)}.ds-sequence .ds-current{color:var(--ink,#2b352f)}.ds-sequence .ds-current>span{background:var(--accent,#ba4729);border-color:var(--accent,#ba4729)}.ds-sequence .ds-done>span{background:var(--green,#50734d);border-color:var(--green,#50734d)}"
+      "css": ".ds-sequence{font-family:'DM Sans',sans-serif;border-top:1px solid #dadbd0;padding-top:20px}.ds-sequence h3{font-size:12px;font-weight:650;margin:0;color:#2b352f}.ds-sequence ol{list-style:none;margin:15px 0 0;padding:0}.ds-sequence li{position:relative;display:flex;align-items:center;gap:11px;min-height:28px;font-size:11px;color:#62675c}.ds-sequence li>span{width:7px;height:7px;border:1px solid #a6b09e;border-radius:50%;background:#faf8f2;z-index:1}.ds-sequence li:not(:last-child):after{content:\"\";position:absolute;left:3px;top:18px;width:1px;height:21px;background:#dadbd0}.ds-sequence .ds-current{color:#2b352f}.ds-sequence .ds-current>span{background:#ba4729;border-color:#ba4729}.ds-sequence .ds-done>span{background:#50734d;border-color:#50734d}"
     },
     {
-      "name": "Mission panel",
+      "name": "Aster demo \u2014 Mission panel",
       "kind": "custom",
       "refersTo": "mission-panel",
       "description": "Paper sidebar container; mobile changes its separator to the top edge.",
       "html": "<aside class=\"ds-panel\"><h2>Ready for liftoff?</h2><p>Meet Aster-01. A heavy-lift explorer with a little extra ambition.</p></aside>",
-      "css": ".ds-panel{font-family:'DM Sans',sans-serif;padding:30px 25px 23px;background:var(--paper,#faf8f2);border-left:1px solid var(--line,#dadbd0);color:var(--ink,#2b352f)}.ds-panel h2{font-family:Manrope,sans-serif;font-size:23px;line-height:1.25;letter-spacing:-.03em;font-weight:750;margin:0 0 11px}.ds-panel p{font-size:12px;line-height:1.65;color:var(--muted,#62675c);margin:0}"
+      "css": ".ds-panel{font-family:'DM Sans',sans-serif;padding:30px 25px 23px;background:#faf8f2;border-left:1px solid #dadbd0;color:#2b352f}.ds-panel h2{font-family:Manrope,sans-serif;font-size:23px;line-height:1.25;letter-spacing:-.03em;font-weight:750;margin:0 0 11px}.ds-panel p{font-size:12px;line-height:1.65;color:#62675c;margin:0}"
     },
     {
-      "name": "Footer navigation",
+      "name": "Aster demo \u2014 Footer navigation",
       "kind": "nav",
       "description": "Quiet source and example links, underlined on hover and outlined on focus.",
       "html": "<nav class=\"ds-footer-nav\" aria-label=\"Related examples\"><a href=\"../robot/\">Meet Roo</a><a href=\"rocket.js\" download>Explore the rocket source</a></nav>",
-      "css": ".ds-footer-nav{font-family:'DM Sans',sans-serif;display:flex;gap:24px;font-size:11px;color:var(--muted,#62675c)}.ds-footer-nav a{color:inherit;text-decoration:none;text-underline-offset:4px}.ds-footer-nav a:hover{text-decoration:underline}.ds-footer-nav a:focus-visible{outline:3px solid var(--accent,#ba4729);outline-offset:4px}"
+      "css": ".ds-footer-nav{font-family:'DM Sans',sans-serif;display:flex;gap:24px;font-size:11px;color:#62675c}.ds-footer-nav a{color:inherit;text-decoration:none;text-underline-offset:4px}.ds-footer-nav a:hover{text-decoration:underline}.ds-footer-nav a:focus-visible{outline:3px solid #ba4729;outline-offset:4px}"
+    },
+    {
+      "name": "Homepage \u2014 Primary action",
+      "kind": "button",
+      "description": "Green demo-discovery action with quiet hover.",
+      "html": "<a class=\"ds-home-action\" href=\"#worlds\">Explore the worlds <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
+      "css": ".ds-home-action{display:inline-flex;align-items:center;gap:22px;min-height:51px;background:var(--green,#2c5138);color:var(--paper,#f7f9f5);border:0;border-radius:9px;padding:14px 20px;font:600 14px \"DM Sans\",sans-serif;text-decoration:none;transition:background .18s}.ds-home-action svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}.ds-home-action:hover{background:var(--green-hover,#1e3c29)}.ds-home-action:focus-visible{outline:3px solid #bd642b;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-home-action{transition:none}}",
+      "refersTo": "homepage-button-primary"
+    },
+    {
+      "name": "Homepage \u2014 World selector",
+      "kind": "custom",
+      "description": "Native pressed-state model choice; selected is green.",
+      "html": "<div class=\"ds-home-picker\" role=\"group\" aria-label=\"Choose a live world\"><button aria-pressed=\"true\">Aster</button><button aria-pressed=\"false\">Vela</button><button aria-pressed=\"false\">Roo</button><button aria-pressed=\"false\">Sprout Yard</button></div>",
+      "css": ".ds-home-picker{display:flex;gap:6px;color:var(--ink,#20382a);font-family:\"DM Sans\",sans-serif}.ds-home-picker button{min-height:44px;padding:9px 12px;border:0;border-radius:7px;background:transparent;color:inherit;font:12px \"DM Sans\",sans-serif;cursor:pointer}.ds-home-picker button[aria-pressed=true]{background:var(--green,#2c5138);color:var(--paper,#f7f9f5)}.ds-home-picker button:hover:not([aria-pressed=true]){background:#e4ecdf}.ds-home-picker button:focus-visible{outline:3px solid #bd642b;outline-offset:5px}",
+      "refersTo": "homepage-world-option"
+    },
+    {
+      "name": "Homepage \u2014 Scene control",
+      "kind": "button",
+      "description": "Circular pause/reset tooling around the live model.",
+      "html": "<button class=\"ds-home-tool\" aria-label=\"Reset preview camera\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 10a8 8 0 1 1 1 7M4 4v6h6\"/></svg></button>",
+      "css": ".ds-home-tool{display:grid;place-items:center;width:44px;height:44px;background:#f7f9f5cc;color:var(--ink,#20382a);border:0;border-radius:50%;cursor:pointer}.ds-home-tool svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6}.ds-home-tool:hover:not(:disabled){background:#fff}.ds-home-tool:disabled{opacity:.45;cursor:default}.ds-home-tool:focus-visible{outline:3px solid #bd642b;outline-offset:5px}",
+      "refersTo": "homepage-scene-control"
+    },
+    {
+      "name": "Homepage \u2014 Text navigation",
+      "kind": "nav",
+      "description": "Quiet homepage links with underlined hover.",
+      "html": "<nav class=\"ds-home-nav\" aria-label=\"Main navigation\"><a href=\"#worlds\">The worlds</a><a href=\"#skill\">Make your own</a></nav>",
+      "css": ".ds-home-nav{display:flex;gap:36px;color:var(--ink,#20382a);font:14px \"DM Sans\",sans-serif}.ds-home-nav a{color:inherit;text-decoration:none;text-underline-offset:5px}.ds-home-nav a:hover{text-decoration:underline}.ds-home-nav a:focus-visible{outline:3px solid #bd642b;outline-offset:5px}"
+    },
+    {
+      "name": "Homepage \u2014 Open catalog caption",
+      "kind": "custom",
+      "description": "Unboxed title and description beneath a transparent object render.",
+      "html": "<a class=\"ds-home-item\" href=\"assets/rocket/\"><h3>Aster</h3><span>Ready for liftoff.</span><p>Count down, fire nine engines, and clear the tower.</p></a>",
+      "css": ".ds-home-item{display:block;background:transparent;color:var(--ink,#20382a);border:0;border-radius:0;text-decoration:none;max-width:54ch}.ds-home-item h3{font:500 29px/1.15 Outfit,sans-serif;letter-spacing:-.025em;margin:0 0 7px}.ds-home-item span{font:12px \"DM Sans\",sans-serif;color:var(--muted,#5b6b5d)}.ds-home-item p{font:14px/1.65 \"DM Sans\",sans-serif;color:var(--muted,#5b6b5d);margin:11px 0 0}.ds-home-item:focus-visible{outline:3px solid #bd642b;outline-offset:5px}",
+      "refersTo": "homepage-object-item"
+    },
+    {
+      "name": "Homepage \u2014 Install copy",
+      "kind": "button",
+      "description": "Pale copy action within the deep green installation section.",
+      "html": "<div class=\"ds-home-install\"><button class=\"ds-home-copy\">Copy install command</button></div>",
+      "css": ".ds-home-install{background:var(--deep,#233f2e);padding:20px}.ds-home-copy{display:inline-flex;align-items:center;gap:9px;min-height:40px;background:#d0dfbd;color:#213b29;border:0;border-radius:7px;padding:10px 15px;font:600 12px \"DM Sans\",sans-serif;cursor:pointer}.ds-home-copy:hover{background:#e0ebd2}.ds-home-copy:focus-visible{outline:3px solid #d0dfbd;outline-offset:5px}",
+      "refersTo": "homepage-button-copy"
     }
   ],
   "narrative": {
-    "northStar": "The miniature launch world",
-    "overview": "Aster extends the repository's procedural miniature-world grammar into a launch complex. Warm surfaces, an ivory vehicle, orange and copper detailing, and visible industrial structure make the scene feel tangible. Orthographic framing presents the model as a small constructed world that can be inspected from multiple angles.\n\nThe interface pairs a spacious scene with a compact mission panel. Manrope gives headlines a rounded, confident presence; DM Sans keeps the operational information quiet. Motion expresses machinery and progression: hinged service arms, ignition, accelerating ascent, camera following, and changing mission state.\n\nThis name is a descriptive record of the implementation, not a separately approved brand metaphor. Tokens are extracted from `assets/rocket/style.css` and the exported palette in `rocket.js`. This system describes Aster; it does not claim that the earlier robot and garden previews share every token.",
+    "northStar": "The kinetic object catalog",
+    "overview": "The homepage gives procedural models room to stand on a light green ground. Rounded Outfit headlines and quiet DM Sans descriptions introduce the objects; green actions and a deep green installation section guide exploration and reuse. Transparent renders and real 3D cast shadows supply the visual material, with generous separation in place of decorative framing.\n\nThe user's rejection of boxes and overlapping outlines applies to this homepage. Native focus outlines and small functional controls remain. This is a descriptive record of the implemented direction, not a claim of separate brand approval.",
     "keyCharacteristics": [
-      "Warm paper interface beside a procedural industrial diorama.",
-      "Ivory vehicle with orange markings and steel detail.",
-      "Orthographic inspection with soft cast shadows.",
-      "Compact semantic mission controls and explicit animation state."
+      "Open object presentation with transparent backgrounds.",
+      "Green typography and actions on a light neutral ground.",
+      "Restrained controls around real procedural geometry.",
+      "A deep green section for installation and reuse."
     ],
     "rules": [
       {
-        "name": "The Scene Scope Rule",
-        "body": "Nightfall changes the scene and its overlays; it does not recolor the entire mission interface.",
+        "name": "The Homepage Object Ground Rule",
+        "body": "Keep the scene and catalog image surfaces transparent; do not restore framing backgrounds or decorative outlines around the models.",
         "section": "colors"
-      },
-      {
-        "name": "The Scene and Mission Rule",
-        "body": "Keep scene inspection and mission controls legible as distinct regions, preserving their stacked order on small screens.",
-        "section": "layout"
       }
     ],
     "dos": [
-      "Do reuse the exported procedural material palette for related rocket and launch-complex geometry.",
-      "Do pair mission status with text and semantic pressed or disabled state.",
-      "Do keep orthographic inspection and soft cast shadows central to the miniature-world presentation.",
-      "Do retain visible focus outlines and the reduced-motion paused start."
+      "Do keep transparent models on the page ground with enough space to read their silhouettes.",
+      "Do retain native pressed states, clear demo links, visible keyboard focus, and reduced-motion paused start.",
+      "Do use homepage-prefixed tokens for the homepage and preserve each demo's scoped system."
     ],
     "donts": [
-      "Don't infer a whole-page dark theme from the scene-scoped nightfall treatment.",
-      "Don't describe the illustrative telemetry as a physically validated flight simulation.",
-      "Don't substitute hard opaque geometry for the camera-facing translucent exhaust and smoke treatment.",
-      "Don't turn observed 11px supporting text into a required size for new surfaces."
+      "Don't restore framed gallery cards, drafting grids, or overlapping decorative outlines on the homepage.",
+      "Don't remove functional control or code boundaries while applying the open object layout.",
+      "Don't claim launch simulation, zoom, pan, or asset export controls for the homepage preview."
     ]
   }
 }
